@@ -29,7 +29,7 @@ import './index.css';
         }
 
         squares[i] = this.state.next;
-        this.setState({squares: squares, next: this.state.next === 'X' ? 'O' : 'X'});        
+        this.setState({squares: squares, next: this.state.next === 'X' ? 'O' : 'X'});
     }
 
     renderSquare(i) {
@@ -39,6 +39,18 @@ import './index.css';
         onClick={()=>this.hanndleClick(i)}
       />);
     }
+
+    renderSquares(dimension) {
+      let rows = [];
+      for (let i = 0; i < dimension; i++) {
+        let columns = [];
+        for (let j = 0; j < dimension; j++) {
+          columns.push(this.renderSquare(i*dimension + j));
+        }
+        rows.push(<div className="board-row">{columns}</div>)
+      }
+      return(rows);
+    }
   
     render() {
       const winner = calculateWinner(this.state.squares);
@@ -47,21 +59,7 @@ import './index.css';
       return (
         <div>
           <div className="status">{status}</div>
-          <div className="board-row">
-            {this.renderSquare(0)}
-            {this.renderSquare(1)}
-            {this.renderSquare(2)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(3)}
-            {this.renderSquare(4)}
-            {this.renderSquare(5)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(6)}
-            {this.renderSquare(7)}
-            {this.renderSquare(8)}
-          </div>
+          {this.renderSquares(3)}
         </div>
       );
     }
