@@ -5,7 +5,7 @@ import { Constants } from '../helpers/Constants';
 export class AuthService {
   public userManager: UserManager;
 
-  constructor() {
+  constructor() {    
     const settings = {
       authority: Constants.stsAuthority,
       client_id: Constants.clientId,
@@ -20,6 +20,7 @@ export class AuthService {
 
     Log.logger = console;
     Log.level = Log.INFO;
+    Log.logger.info(settings);
   }
 
   public getUser(): Promise<User | null> {
