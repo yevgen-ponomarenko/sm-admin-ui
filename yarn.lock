@@ -2245,7 +2245,7 @@ cache-base@^1.0.1:
     get-value "^2.0.6"
     has-value "^1.0.0"
     isobject "^3.0.1"
-    set-value "^2.0.0"
+    set-value "^2.0.1"
     to-object-path "^0.3.0"
     union-value "^1.0.0"
     unset-value "^1.0.0"
@@ -8578,8 +8578,8 @@ set-immediate-shim@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
 
-set-value@^0.4.3:
-  version "0.4.3"
+set-value@^2.0.1:
+  version "2.0.1"
   resolved "https://registry.yarnpkg.com/set-value/-/set-value-0.4.3.tgz#7db08f9d3d22dc7f78e53af3c3bf4666ecdfccf1"
   dependencies:
     extend-shallow "^2.0.1"
@@ -9134,7 +9134,7 @@ terser-webpack-plugin@1.4.1, terser-webpack-plugin@^1.4.1:
     find-cache-dir "^2.1.0"
     is-wsl "^1.1.0"
     schema-utils "^1.0.0"
-    serialize-javascript "^1.7.0"
+    serialize-javascript "^2.1.1"
     source-map "^0.6.1"
     terser "^4.1.2"
     webpack-sources "^1.4.0"
@@ -9375,7 +9375,7 @@ union-value@^1.0.0:
     arr-union "^3.1.0"
     get-value "^2.0.6"
     is-extendable "^0.1.1"
-    set-value "^0.4.3"
+    set-value "^2.0.1"
 
 uniq@^1.0.1:
   version "1.0.1"
